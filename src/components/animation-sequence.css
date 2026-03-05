@@ -1,0 +1,90 @@
+﻿.sequence-section {
+  position: relative;
+  background: #ffffff;
+}
+
+.sequence-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sequence-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.sequence-hud {
+  position: absolute;
+  left: clamp(1rem, 4vw, 4rem);
+  bottom: clamp(1.25rem, 7vh, 4rem);
+  max-width: min(36rem, 88vw);
+  padding: clamp(1rem, 2.4vw, 1.5rem);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(8, 13, 24, 0.72);
+  backdrop-filter: blur(10px);
+}
+
+.sequence-eyebrow {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #96d2ff;
+}
+
+.sequence-title {
+  margin: 0.5rem 0 0;
+  font-size: clamp(1.4rem, 3.7vw, 3.1rem);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.sequence-copy {
+  margin: 0.85rem 0 0;
+  color: rgba(239, 242, 255, 0.82);
+  font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+  max-width: 48ch;
+}
+
+.sequence-progress-track {
+  position: relative;
+  margin-top: 1rem;
+  width: 100%;
+  height: 0.35rem;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.sequence-progress-fill {
+  height: 100%;
+  width: 100%;
+  transform-origin: 0% 50%;
+  background: linear-gradient(90deg, #57b0ff, #9f7cff, #ff7f9f);
+}
+
+.sequence-status {
+  margin: 0.85rem 0 0;
+  font-size: 0.85rem;
+  color: rgba(239, 242, 255, 0.7);
+}
+
+@media (max-width: 720px) {
+  .sequence-hud {
+    left: 0.85rem;
+    right: 0.85rem;
+    bottom: 0.85rem;
+    max-width: none;
+  }
+
+  .sequence-copy {
+    max-width: none;
+  }
+}
+
